@@ -141,7 +141,7 @@ body {
 }
 
 .parallax:nth-child(1) {
-    background-image: url("./assets/compressed/Parallax1.jpg");
+    background-image: url("./assets/Parallax1.jpg");
 }
 
 .parallax:nth-child(3) {

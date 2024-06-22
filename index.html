@@ -11,8 +11,10 @@
 </head>
 
 <body>
+    <div class="parallax"></div>
+
     <header>
-        <h1 class="text-center text-3xl my-12">
+        <h1 class="text-center text-white text-3xl my-6">
             ¡Hola, <span class="font-semibold happiness">Mi Niña Hermosa</span>!
         </h1>
 
@@ -34,13 +36,13 @@
     <div class="parallax"></div>
 
     <main class="flex flex-col gap-4 my-12">
-        <h1 class="text-2xl font-bold w-full text-center mt-8 mb-6 py-2 text-white uppercase gonna-bg">Detalles de la
+        <h1 class="text-2xl font-bold w-full text-center mb-6 py-2 text-white uppercase gonna-bg">Detalles de la
             Cita</h1>
 
         <section class="flex flex-wrap justify-center">
             <div class="card">
                 <div class="face front flex items-center justify-center">
-                    <img src="./assets/Fecha.jpeg"
+                    <img src="./assets/compressed/Fecha.jpeg"
                         alt="Un calendario con personajes alusivos a la pelicula IntensaMente">
                 </div>
 
@@ -61,7 +63,7 @@
 
             <div class="card">
                 <div class="face front flex items-center justify-center">
-                    <img src="./assets/Hora.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
+                    <img src="./assets/compressed/Hora.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
                 </div>
 
                 <div class="face back flex flex-col items-center justify-center gap-4 font-bold">
@@ -81,7 +83,7 @@
 
             <div class="card">
                 <div class="face front flex items-center justify-center">
-                    <img src="./assets/Lugar.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
+                    <img src="./assets/compressed/Lugar.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
                 </div>
 
                 <div class="face back flex flex-col items-center justify-center gap-4 font-bold">
@@ -114,7 +116,7 @@
     <div class="parallax"></div>
 
     <footer>
-        <p class="text-xl text-center mx-4 my-2 rounded-xl disgust">
+        <p class="text-xl text-center font-semibold mx-4 my-2 rounded-xl disgust">
             Espero que puedas aceptar esta invitación especial. Me hace mucha ilusión compartir este momento contigo.
         </p>
 
@@ -127,9 +129,9 @@
         </p>
 
         <section class="mb-8 p-4 flex justify-around" id="container">
+            <button class="px-6 py-2 rounded-lg font-semibold text-white reject" id="reject">Rechazar</button>
+
             <button class="px-6 py-2 rounded-lg font-semibold text-white disgust-bg" id="accept">Aceptar</button>
-            
-            <button class="px-6 py-2 rounded-lg font-semibold reject" id="reject">Rechazar</button>
         </section>
 
     </footer>

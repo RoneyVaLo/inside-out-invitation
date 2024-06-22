@@ -12,19 +12,19 @@
 
 <body>
     <header>
-        <h1 class="text-center text-3xl my-4">
-            ¡Hola, <span class="font-semibold">Mi Niña Hermosa</span>!
+        <h1 class="text-center text-3xl my-12">
+            ¡Hola, <span class="font-semibold happiness">Mi Niña Hermosa</span>!
         </h1>
 
-        <p class="text-2xl text-center my-2">
+        <p class="text-2xl text-center my-2 mx-6 rounded-xl p-4 happiness-bg">
             He estado pensando en una manera especial de pasar tiempo juntos, y se me ocurrió algo perfecto.
         </p>
 
-        <p class="text-2xl text-center my-4">
+        <p class="text-2xl text-center my-4 mx-12 rounded-3xl px-8 py-4 sadness-bg">
             ¿Qué te parece si tenemos una tarde/noche de película en tu casa?
         </p>
 
-        <p class="text-2xl text-center my-2">
+        <p class="text-2xl text-center my-2 mx-2 gonna">
             Te invito a ver Intensamente 2 conmigo. Me encantaría compartir esta aventura contigo, reírnos, emocionarnos
             y disfrutar de una gran película juntos.
         </p>
@@ -32,47 +32,81 @@
 
     <div class="parallax"></div>
 
-    <main>
-        <h1>Detalles de la Noche:</h1>
+    <main class="flex flex-col gap-4 my-12">
+        <h1 class="text-2xl font-bold w-full text-center mb-8 uppercase">Detalles de la Noche</h1>
 
-        <!-- TODO: Puedo hacer que los DIV sean cards que al presionarla se de vuelta para ver los datos -->
+        <section class="flex flex-wrap justify-center">
+            <div class="card">
+                <div class="face front flex items-center justify-center">
+                    <img src="./assets/Fecha.jpeg" alt="Un calendario con personajes alusivos a la pelicula IntensaMente">
+                    <!-- <h2 class="text-2xl font-bold">Fecha</h2> -->
+                </div>
 
-        <div>
-            <h2>🗓 Fecha:</h2>
+                <div class="face back flex flex-col items-center justify-center gap-4 font-bold">
+                    <p class="text-lg uppercase">
+                        23
+                    </p>
 
-            <p>
-                23
-            </p>
+                    <p class="text-lg uppercase">
+                        de Junio
+                    </p>
 
-            <p>
-                de Junio
-            </p>
+                    <p class="text-lg uppercase">
+                        del 2024
+                    </p>
+                </div>
+            </div>
 
-            <p>
-                del 2024
-            </p>
-        </div>
+            <div class="card">
+                <div class="face front flex items-center justify-center">
+                    <img src="./assets/Hora.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
+                    <h2 class="text-2xl font-bold">Hora</h2>
+                </div>
 
-        <div>
-            <h2>⏰ Hora:</h2>
-            <p>
-                Tarde y Noche
-            </p>
-        </div>
+                <div class="face back flex flex-col items-center justify-center gap-4 font-bold">
+                    <p class="text-lg uppercase">
+                        Tarde
+                    </p>
 
-        <div>
-            <h2>📍 Lugar:</h2>
-            <p>
-                Tu casa
-            </p>
-        </div>
+                    <p class="text-lg uppercase">
+                        Y
+                    </p>
 
-        <p>
+                    <p class="text-lg uppercase">
+                        Noche
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face front flex items-center justify-center">
+                    <img src="./assets/Lugar.jpeg" alt="Un reloj alusivo a la pelicula IntensaMente">
+                    <h2 class="text-2xl font-bold">Lugar</h2>
+                </div>
+
+                <div class="face back flex flex-col items-center justify-center gap-4 font-bold">
+                    <p class="text-lg uppercase">
+                        En
+                    </p>
+
+                    <p class="text-lg uppercase">
+                        Tu
+                    </p>
+
+                    <p class="text-lg uppercase">
+                        casa
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <p class="text-xl text-center mx-2">
             Podemos preparar unas palomitas, ponernos cómodos y disfrutar de esta secuela que promete ser aún más
             emocionante que la primera.
         </p>
 
-        <p>
+        <p class="text-xl text-center mx-4">
             Será una noche mágica, solo tú y yo, disfrutando de una película que sé que ambos disfrutamos.
         </p>
     </main>
@@ -93,5 +127,18 @@
         </p>
     </footer>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var cards = document.querySelectorAll('.card');
+    
+        cards.forEach(function(card) {
+            card.addEventListener('touchstart', function() {
+                card.classList.toggle('active');
+            });
+        });
+    });
+    </script>
+    
 
 </html>

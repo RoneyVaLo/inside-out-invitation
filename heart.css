@@ -1,0 +1,60 @@
+.heart {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background-color: #C1121F;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: heartbeat 3s infinite;
+    border-radius: 0 0 0 10px;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #C1121F;
+    border-radius: 50%;
+}
+
+.heart::before {
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    top: -100px;
+    left: 0;
+}
+
+.heart::after {
+    border-right: 4px solid #fff;
+    top: 0;
+    left: 100px;
+}
+
+.heart p {
+    z-index: 1;
+    position: absolute;
+    transform: rotate(45deg) translate(0%, -40%);
+    line-height: 1.8;
+}
+
+/* Definición de la animación */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: rotate(-45deg) scale(1);
+    }
+    25% {
+        transform: rotate(-45deg) scale(.91);
+    }
+    50% {
+        transform: rotate(-45deg) scale(.98);
+    }
+    75% {
+        transform: rotate(-45deg) scale(.94);
+    }
+}

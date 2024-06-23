@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -109,7 +110,7 @@
         </p>
 
         <p class="text-xl text-center mx-8 text-white rounded-xl p-2 fear-bg">
-            Será una noche mágica, solo tú y yo, disfrutando de una película que sé que ambos disfrutamos.
+            Será un tiempo mágico, solo tú y yo, disfrutando de una película que sé que ambos disfrutamos.
         </p>
     </main>
 
@@ -129,7 +130,24 @@
         </p>
 
         <section class="mb-8 p-4 flex justify-around" id="container">
-            <button class="px-6 py-2 rounded-lg font-semibold text-white reject" id="reject">Rechazar</button>
+            <a href="#modal">
+                <button class="px-6 py-2 rounded-lg font-semibold text-white reject" id="reject">Rechazar</button>
+            </a>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <a href="#container" class="modal-close">&times;</a>
+
+                    <h2 class="text-center text-xl font-bold my-6">¿No te gustaría cambiar de opinión?</h2>
+
+                    <img src="./assets/triste.png" alt="Emoji de cara triste" class="mx-auto w-80" id="emoji">
+
+                    <div class="w-full flex justify-center mt-4">
+                        <a href="#container" class="text-xl font-bold px-4 py-2 rounded-lg" id="modal-close">Cambié de
+                            Opinión</a>
+                    </div>
+                </div>
+            </div>
 
             <a
                 href="https://wa.me/50662831879?text=%2AAcepto%2A%20Tu%20Invitaci%C3%B3n%20Para%20Ver%20%2AIntensamente%202%2A">
@@ -139,6 +157,29 @@
 
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalClose = document.getElementById('modal-close');
+
+        setInterval(() => {
+            modalClose.classList.add('shake-animation');
+            setTimeout(() => {
+                modalClose.classList.remove('shake-animation');
+            }, 2000); // Duración de la animación
+        }, 5000); // Intervalo de repetición
+    });
+
+    document.getElementById('modal-close').addEventListener("click", () => {
+        confetti();
+    });
+
+    document.getElementById('accept').addEventListener("click", () => {
+        confetti();
+    });
+</script>
 
 
 </html>
